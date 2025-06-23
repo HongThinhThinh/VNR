@@ -1959,3 +1959,539 @@ cite {
         padding: 0 30px;
     }
 }
+
+/* ===== RESPONSIVE DESIGN ===== */
+
+/* Extra Large screens (1200px and up) */
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1400px;
+    }
+
+    .hero-title {
+        font-size: 4rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.5rem;
+    }
+
+    .section-title {
+        font-size: 3rem;
+    }
+}
+
+/* Large screens (992px to 1199px) */
+@media (max-width: 1199px) and (min-width: 992px) {
+    .container {
+        max-width: 1100px;
+    }
+
+    .hero {
+        padding: 100px 0 80px;
+    }
+
+    .hero-title {
+        font-size: 3.5rem;
+    }
+
+    .gallery-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .documents-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Medium screens - Tablet (768px to 991px) */
+@media (max-width: 991px) and (min-width: 768px) {
+    .container {
+        padding: 0 30px;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 120px 0 60px;
+    }
+
+    .hero-content {
+        margin-bottom: 3rem;
+    }
+
+    .hero-title {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.2rem;
+    }
+
+    .content-grid,
+    .declaration-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+
+    .uprising-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+
+    .significance-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+
+    .documents-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+
+    .timeline-items {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    .timeline-item {
+        min-width: 140px;
+    }
+
+    .section-title {
+        font-size: 2.2rem;
+    }
+
+    .section {
+        padding: 60px 0;
+    }
+}
+
+/* Small screens - Mobile Large (481px to 767px) */
+@media (max-width: 767px) and (min-width: 481px) {
+    .container {
+        padding: 0 20px;
+    }
+
+    .hero {
+        padding: 100px 0 50px;
+        min-height: 90vh;
+    }
+
+    .hero-title {
+        font-size: 2.5rem;
+        line-height: 1.2;
+    }
+
+    .hero-subtitle {
+        font-size: 1.1rem;
+    }
+
+    .hero-date {
+        font-size: 1.1rem;
+        margin: 1.5rem 0;
+    }
+
+    .cta-button {
+        padding: 12px 24px;
+        font-size: 1rem;
+    }
+
+    .section {
+        padding: 50px 0;
+    }
+
+    .section-title {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .content-grid,
+    .declaration-content {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+
+    .uprising-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .significance-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+
+    .documents-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .timeline-items {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .timeline-item {
+        width: 100%;
+        max-width: 200px;
+        padding: 1rem;
+    }
+
+    .prep-item {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+    }
+
+    .prep-date {
+        position: relative;
+        left: auto;
+        margin-bottom: 1rem;
+    }
+
+    .revolution-timeline {
+        gap: 1rem;
+    }
+
+    .rev-item {
+        padding: 1rem;
+    }
+
+    .argument-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    /* Gallery responsive */
+    .gallery-item .image-placeholder {
+        height: 200px;
+    }
+
+    .gallery-item .image-placeholder h4 {
+        font-size: 1rem;
+    }
+
+    .gallery-item .image-placeholder p {
+        font-size: 0.8rem;
+    }
+
+    /* Flag animation responsive */
+    .hero-flag {
+        transform: scale(0.8);
+    }
+
+    .flag-vietnam {
+        width: 120px;
+        height: 80px;
+    }
+
+    .flag-star {
+        font-size: 1.5rem;
+    }
+}
+
+/* Extra Small screens - Mobile (480px and below) */
+@media (max-width: 480px) {
+    .container {
+        padding: 0 15px;
+    }
+
+    .hero {
+        padding: 90px 0 40px;
+        min-height: 85vh;
+    }
+
+    .hero-title {
+        font-size: 2rem;
+        line-height: 1.1;
+        margin-bottom: 1rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .hero-date {
+        font-size: 1rem;
+        margin: 1rem 0;
+    }
+
+    .cta-button {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+
+    .section {
+        padding: 40px 0;
+    }
+
+    .section-title {
+        font-size: 1.8rem;
+        margin-bottom: 1.5rem;
+        line-height: 1.2;
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .uprising-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .significance-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .timeline-items {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .timeline-item {
+        padding: 0.75rem;
+        font-size: 0.9rem;
+    }
+
+    .prep-item {
+        padding: 1rem;
+    }
+
+    .prep-date {
+        font-size: 0.9rem;
+        padding: 0.5rem 1rem;
+    }
+
+    .prep-content h3 {
+        font-size: 1.1rem;
+    }
+
+    .prep-content p {
+        font-size: 0.9rem;
+    }
+
+    .uprising-card {
+        padding: 1.5rem;
+    }
+
+    .uprising-card h3 {
+        font-size: 1.2rem;
+    }
+
+    .uprising-card .date {
+        font-size: 0.9rem;
+    }
+
+    .uprising-card p {
+        font-size: 0.9rem;
+    }
+
+    .significance-item {
+        padding: 1.5rem;
+        text-align: center;
+    }
+
+    .significance-item i {
+        font-size: 2rem;
+    }
+
+    .significance-item h3 {
+        font-size: 1.1rem;
+    }
+
+    .significance-item p {
+        font-size: 0.85rem;
+    }
+
+    .revolution-timeline {
+        gap: 0.5rem;
+    }
+
+    .rev-item {
+        padding: 0.75rem;
+        font-size: 0.9rem;
+    }
+
+    .rev-date {
+        font-size: 0.8rem;
+    }
+
+    .debate-content {
+        gap: 1.5rem;
+    }
+
+    .wrong-view,
+    .counter-arguments {
+        padding: 1.5rem;
+    }
+
+    .document-category {
+        padding: 1.5rem;
+    }
+
+    .document-category h3 {
+        font-size: 1.1rem;
+    }
+
+    .document-link h4 {
+        font-size: 1rem;
+    }
+
+    .document-link p {
+        font-size: 0.85rem;
+    }
+
+    /* Flag animation responsive */
+    .hero-flag {
+        transform: scale(0.7);
+        margin-top: 1rem;
+    }
+
+    .flag-vietnam {
+        width: 100px;
+        height: 65px;
+    }
+
+    .flag-star {
+        font-size: 1.2rem;
+    }
+
+    .hero-flag h3 {
+        font-size: 1rem;
+        margin-top: 0.5rem;
+    }
+
+    .hero-flag p {
+        font-size: 0.8rem;
+    }
+
+    /* Gallery item responsive */
+    .gallery-item .image-placeholder {
+        height: 180px;
+    }
+
+    .gallery-item::before,
+    .gallery-item::after {
+        top: 8px;
+        right: 8px;
+        width: 30px;
+        height: 30px;
+    }
+
+    .gallery-item::after {
+        font-size: 0.9rem;
+    }
+
+    /* Footer responsive */
+    .footer-content {
+        flex-direction: column;
+        gap: 2rem;
+        text-align: center;
+    }
+
+    .footer-section {
+        margin-bottom: 1rem;
+    }
+
+    .footer-section h3,
+    .footer-section h4 {
+        font-size: 1.1rem;
+        margin-bottom: 1rem;
+    }
+
+    .footer-section ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    .footer-section li {
+        margin: 0;
+    }
+
+    .footer-bottom {
+        text-align: center;
+        font-size: 0.85rem;
+        padding: 1.5rem 0;
+    }
+}
+
+/* Landscape orientation for mobile */
+@media (max-width: 768px) and (orientation: landscape) {
+    .hero {
+        min-height: 100vh;
+        padding: 80px 0 30px;
+    }
+
+    .hero-title {
+        font-size: 2.2rem;
+    }
+
+    .section {
+        padding: 30px 0;
+    }
+
+    .timeline-items {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+    }
+
+    .timeline-item {
+        width: auto;
+        min-width: 120px;
+        padding: 0.5rem;
+        font-size: 0.8rem;
+    }
+}
+
+/* Print styles */
+@media print {
+
+    .header,
+    .hamburger,
+    .cta-button,
+    .lightbox,
+    .particles {
+        display: none !important;
+    }
+
+    .hero {
+        page-break-after: always;
+    }
+
+    .section {
+        page-break-inside: avoid;
+        padding: 20px 0;
+    }
+
+    .section-title {
+        color: #000 !important;
+    }
+
+    body {
+        font-size: 12pt;
+        line-height: 1.4;
+        color: #000;
+        background: #fff;
+    }
+}
