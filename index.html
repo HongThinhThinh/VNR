@@ -77,13 +77,29 @@
             <a href="#context" class="cta-button">Khám phá lịch sử</a>
         </div>
         <div class="hero-image">
-            <div class="hero-flag">
-                <div class="flag-vietnam">
-                    <div class="flag-red"></div>
-                    <div class="flag-star">★</div>
+            <div class="video-container" id="videoContainer">
+                <!-- Video Thumbnail -->
+                <div class="video-thumbnail" id="videoThumbnail">
+                    <img src="https://img.youtube.com/vi/5uwqWetmHY8/maxresdefault.jpg" alt="Cách mạng Tháng Tám 1945">
+                    <div class="play-button-overlay">
+                        <div class="play-button">
+                            <i class="fas fa-play"></i>
+                        </div>
+                    </div>
+                    <div class="video-info-overlay">
+                        <h3><i class="fas fa-video"></i> Video lịch sử</h3>
+                        <p>Cách mạng Tháng Tám 1945</p>
+                        <span class="video-duration">15:32</span>
+                    </div>
+                </div> <!-- Video Player (hidden initially) -->
+                <div class="video-wrapper" id="videoPlayer">
+                    <iframe width="600" height="600"
+                        src="https://www.youtube.com/embed/84IOFwtvkAI?autoplay=0&rel=0&modestbranding=1"
+                        title="Cách mạng Tháng Tám 1945 - Video lịch sử" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                 </div>
-                <h3>Việt Nam Dân chủ Cộng hòa</h3>
-                <p>Sinh ngày 2 tháng 9 năm 1945</p>
+
             </div>
         </div>
     </section>
@@ -141,7 +157,7 @@
                 </div>
                 <div class="content-image">
                     <div class="image-placeholder">
-                        <i class="fas fa-globe-asia"></i>
+                        <img src="https://maisonoffice.vn/wp-content/uploads/2023/11/4-ban-do-the-gioi.jpg" alt="">
                         <h4>Bản đồ thế giới</h4>
                         <p>Tình hình thế giới 1939-1945</p>
                     </div>
@@ -254,7 +270,7 @@
     <!-- Tuyên ngôn Độc lập -->
     <section class="section">
         <div class="container">
-            <h2 class="section-title">Tuyên ngôn Độc lập 2/9/1945</h2>
+            <h2 class="section-title" style="margin-bottom: 150px;">Tuyên ngôn Độc lập 2/9/1945</h2>
             <div class="declaration-content">
                 <div class="declaration-text">
                     <blockquote>
@@ -267,7 +283,9 @@
                 </div>
                 <div class="declaration-image">
                     <div class="image-placeholder">
-                        <i class="fas fa-landmark"></i>
+                        <img style="width: 700px; height: 700px; border-radius: 20px;"
+                            src="https://owa.bestprice.vn/images/destinations/uploads/quang-truong-ba-dinh-60125a894db4c.jpg"
+                            alt="">
                         <h4>Quảng trường Ba Đình</h4>
                         <p>Nơi đọc Tuyên ngôn Độc lập</p>
                     </div>
@@ -403,19 +421,22 @@
                     <h3><i class="fas fa-book"></i> Sách và Tài liệu chính thức</h3>
                     <ul class="document-list">
                         <li>
-                            <a href="#" class="document-link">
+                            <a href="https://tulieuvankien.dangcongsan.vn/van-kien-tu-lieu-ve-dang/book/lich-su-dang/lich-su-bien-nien-dang-cong-san-viet-nam-tap-1-18"
+                                class="document-link">
                                 <h4>Lịch sử Đảng Cộng sản Việt Nam - Tập 1</h4>
                                 <p>Tài liệu chính thức về lịch sử Đảng và Cách mạng Tháng Tám</p>
                             </a>
                         </li>
                         <li>
-                            <a href="#" class="document-link">
+                            <a href="https://hochiminh.vn/tac-pham-cua-ho-chi-minh/ho-chi-minh-toan-tap"
+                                class="document-link">
                                 <h4>Hồ Chí Minh Toàn tập</h4>
                                 <p>Các bài viết và diễn văn của Chủ tịch Hồ Chí Minh về Cách mạng Tháng Tám</p>
                             </a>
                         </li>
                         <li>
-                            <a href="#" class="document-link">
+                            <a href="https://vietnamnet.vn/toan-van-ban-tuyen-ngon-doc-lap-771240.html"
+                                class="document-link">
                                 <h4>Tuyên ngôn Độc lập - Văn kiện lịch sử</h4>
                                 <p>Toàn văn và phân tích bản Tuyên ngôn Độc lập 2/9/1945</p>
                             </a>
@@ -451,19 +472,20 @@
                     <h3><i class="fas fa-university"></i> Bảo tàng và Viện nghiên cứu</h3>
                     <ul class="document-list">
                         <li>
-                            <a href="#" class="document-link">
+                            <a href="https://baotanghochiminh.vn/" class="document-link">
                                 <h4>Bảo tàng Hồ Chí Minh</h4>
                                 <p>Tư liệu và hiện vật về Chủ tịch Hồ Chí Minh và Cách mạng Tháng Tám</p>
                             </a>
                         </li>
                         <li>
-                            <a href="#" class="document-link">
+                            <a href="https://xaydungchinhsach.chinhphu.vn/tu-1-11-bao-tang-lich-su-quan-su-viet-nam-vi-tri-moi-mo-cua-don-khach-mien-phi-tham-quan-119241004184508454.htm"
+                                class="document-link">
                                 <h4>Bảo tàng Lịch sử Quân sự Việt Nam</h4>
                                 <p>Tài liệu về lịch sử quân đội và các cuộc khởi nghĩa</p>
                             </a>
                         </li>
                         <li>
-                            <a href="#" class="document-link">
+                            <a href="https://hcma.vn/Pages/chi-tiet-tin-tuc.aspx?ItemID=85" class="document-link">
                                 <h4>Viện Lịch sử Đảng</h4>
                                 <p>Nghiên cứu khoa học về lịch sử Đảng và Cách mạng Tháng Tám</p>
                             </a>
@@ -482,13 +504,13 @@
                             </a>
                         </li>
                         <li>
-                            <a href="#" class="document-link">
+                            <a href="https://nlv.gov.vn/" class="document-link">
                                 <h4>Thư viện Quốc gia Việt Nam</h4>
                                 <p>Tài liệu số hóa về lịch sử Việt Nam</p>
                             </a>
                         </li>
                         <li>
-                            <a href="#" class="document-link">
+                            <a href="https://chinhphu.vn/" class="document-link">
                                 <h4>Cổng thông tin điện tử Chính phủ</h4>
                                 <p>Văn bản chính thức về các ngày lễ lớn của dân tộc</p>
                             </a>

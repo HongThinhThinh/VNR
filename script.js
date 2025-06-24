@@ -719,6 +719,139 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
+// Debug function to check video elements
+function debugVideoElements() {
+  console.log("=== Video Debug Information ===");
+
+  const elements = {
+    videoContainer: document.getElementById("videoContainer"),
+    videoThumbnail: document.getElementById("videoThumbnail"),
+    videoPlayer: document.getElementById("videoPlayer"),
+    playButton: document.querySelector(".play-button"),
+    playButtonOverlay: document.querySelector(".play-button-overlay"),
+    iframe: document.querySelector("#videoPlayer iframe"),
+  };
+
+  Object.keys(elements).forEach((key) => {
+    const element = elements[key];
+    console.log(`${key}:`, element ? "Found" : "Not found", element);
+    if (element && element.style) {
+      console.log(`${key} styles:`, {
+        display: element.style.display,
+        opacity: element.style.opacity,
+        visibility: element.style.visibility,
+      });
+    }
+  });
+
+  console.log("=== End Video Debug ===");
+}
+
+// Video Player Functionality
+function initVideoPlayer() {
+  console.log("Initializing video player...");
+  debugVideoElements();
+
+  const videoContainer = document.getElementById("videoContainer");
+  const videoThumbnail = document.getElementById("videoThumbnail");
+  const videoPlayer = document.getElementById("videoPlayer");
+  const playButton = document.querySelector(".play-button");
+
+  console.log("Video elements found:", {
+    container: !!videoContainer,
+    thumbnail: !!videoThumbnail,
+    player: !!videoPlayer,
+    playButton: !!playButton,
+  });
+
+  if (videoThumbnail && videoPlayer) {
+    // Add click event to both thumbnail and play button
+    const playVideo = function (e) {
+      e.preventDefault();
+      e.stopPropagation();
+      console.log("Play video clicked");
+
+      try {
+        // Hide thumbnail
+        videoThumbnail.style.display = "none";
+        console.log("Thumbnail hidden");
+
+        // Show video player
+        videoPlayer.style.display = "block";
+        videoPlayer.classList.add("active");
+        console.log("Video player shown");
+
+        // Set iframe src with autoplay
+        const iframe = videoPlayer.querySelector("iframe");
+        if (iframe) {
+          const videoSrc = iframe.getAttribute("data-src");
+          if (videoSrc) {
+            iframe.src = videoSrc + "&autoplay=1&rel=0";
+            console.log("Video iframe src set to:", iframe.src);
+          } else {
+            // Fallback URL
+            iframe.src =
+              "https://www.youtube.com/embed/5uwqWetmHY8?si=j-pzQAqTrR73M1ZN&autoplay=1&rel=0";
+            console.log("Using fallback video URL");
+          }
+        }
+
+        // Add playing class to container
+        if (videoContainer) {
+          videoContainer.classList.add("playing");
+          console.log("Playing class added to container");
+        }
+
+        // Add fade in animation
+        videoPlayer.style.opacity = "0";
+        videoPlayer.style.transition = "opacity 0.5s ease";
+        setTimeout(() => {
+          videoPlayer.style.opacity = "1";
+          console.log("Video fade in completed");
+        }, 50);
+      } catch (error) {
+        console.error("Error playing video:", error);
+      }
+    };
+
+    // Add event listeners
+    videoThumbnail.addEventListener("click", playVideo);
+    console.log("Click event added to thumbnail");
+
+    if (playButton) {
+      playButton.addEventListener("click", playVideo);
+      console.log("Click event added to play button");
+    }
+
+    // Also add event listener to the entire video container
+    if (videoContainer) {
+      videoContainer.addEventListener("click", playVideo);
+      console.log("Click event added to container");
+    }
+
+    console.log("Video player initialization completed successfully");
+  } else {
+    console.error(
+      "Video elements not found - thumbnail:",
+      !!videoThumbnail,
+      "player:",
+      !!videoPlayer
+    );
+  }
+}
+
+// Initialize video player when DOM is ready
+document.addEventListener("DOMContentLoaded", function () {
+  console.log("DOM loaded, initializing video player");
+  initVideoPlayer();
+});
+
+// Also initialize when window loads (backup)
+window.addEventListener("load", function () {
+  console.log("Window loaded, initializing video player (backup)");
+  initVideoPlayer();
+});
+
 // Responsive window resize handler
 function handleWindowResize() {
   const hamburger = document.querySelector(".hamburger");
